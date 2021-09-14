@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-namespace Roman_Numeral_TEST
+namespace RomanNumeral
 {
-    public class Roman_Numeral_Converter
+    public class RomanNumeralConverter
     {
-        public ulong convert(in string input)
+        static public ulong Convert(in string input)
         {
+            if(!IsValid(input))
+            {
+                throw new ArgumentException();
+            }
+
             var integer_stack = new Queue<ulong>();
 
             foreach (var character in input)
@@ -72,6 +78,13 @@ namespace Roman_Numeral_TEST
             }
 
             return result;
+        }
+
+        static public bool IsValid(string test_string)
+        {
+            Regex valid_template = new Regex(@"^[IVXLCDM]{1,15}$");
+
+            return valid_template.IsMatch(test_string);
         }
     }
 }

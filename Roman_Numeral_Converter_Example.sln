@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman_Numeral_Converter", "Roman_Numeral_Converter\Roman_Numeral_Converter.csproj", "{7361F093-53EB-4343-9B13-962853C80D36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanNumeralConverter", "Roman_Numeral_Converter\RomanNumeralConverter.csproj", "{7361F093-53EB-4343-9B13-962853C80D36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman_Numeral_Converter_TEST", "Roman_Numeral_Converter_TEST\Roman_Numeral_Converter_TEST.csproj", "{DECB2577-3EB9-495E-AD67-32658A18F9F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanNumeralConverterTEST", "Roman_Numeral_Converter_TEST\RomanNumeralConverterTEST.csproj", "{DECB2577-3EB9-495E-AD67-32658A18F9F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman_Numeral_Web_App", "Roman_Numeral_Web_App\Roman_Numeral_Web_App.csproj", "{77BC59EA-F30A-436F-816D-F4D13BDD13A4}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Cypress_Runner", "NodejsConsoleApp1\Cypress_Runner.njsproj", "{0BA9BC62-34B3-414E-9AE5-E1200465B67D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DECB2577-3EB9-495E-AD67-32658A18F9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DECB2577-3EB9-495E-AD67-32658A18F9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DECB2577-3EB9-495E-AD67-32658A18F9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BC59EA-F30A-436F-816D-F4D13BDD13A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BC59EA-F30A-436F-816D-F4D13BDD13A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BC59EA-F30A-436F-816D-F4D13BDD13A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BC59EA-F30A-436F-816D-F4D13BDD13A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA9BC62-34B3-414E-9AE5-E1200465B67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA9BC62-34B3-414E-9AE5-E1200465B67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA9BC62-34B3-414E-9AE5-E1200465B67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA9BC62-34B3-414E-9AE5-E1200465B67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

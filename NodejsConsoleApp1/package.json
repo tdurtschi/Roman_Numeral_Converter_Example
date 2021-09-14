@@ -1,0 +1,18 @@
+{
+  "name": "cypressrunner",
+  "version": "0.0.0",
+  "description": "Cypress Runner",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "cypress": "^8.3.1",
+    "start-server-and-test": "^1.14.0"
+  },
+  "scripts": {
+    "test": "cypress open",
+    "run_dev": "dotnet.exe run --project ..\\Roman_Numeral_Web_App\\",
+    "start_test": "start-server-and-test run_dev https-get://localhost:5001 test"
+  }
+}
