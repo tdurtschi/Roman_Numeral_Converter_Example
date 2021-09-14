@@ -13,6 +13,7 @@ namespace Roman_Numeral_Web_App.Controllers
             return View();
         }
 
+        [HttpPost]
         public JsonResult convert(Models.NumeralsViewModel model)
         {
             model.Arabic_Numerals = RomanNumeral.RomanNumeralConverter.Convert(model.Roman_Numerals);

@@ -11,27 +11,27 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe('example to-do app', () => {
-    beforeEach(() => {
-        // Cypress starts out with a blank slate for each test
-        // so we must tell it to visit our website with the `cy.visit()` command.
-        // Since we want to visit the same URL at the start of all our tests,
-        // we include it in our beforeEach function so that it runs before each test
-        cy.visit('https://localhost:44339/')
-    })
+describe("example to-do app", () => {
+  beforeEach(() => {
+    // Cypress starts out with a blank slate for each test
+    // so we must tell it to visit our website with the `cy.visit()` command.
+    // Since we want to visit the same URL at the start of all our tests,
+    // we include it in our beforeEach function so that it runs before each test
+    cy.visit("https://localhost:5001/")
+  })
 
-    it('converts roman to arabic', () => {
-        const newItem = 'MMXXI'
+  it("converts roman to arabic", () => {
+    const newItem = "MMXXI"
 
-        cy.get('[name=Roman_Numerals]').type(`${newItem}`)
-        cy.get('[data-test=number-submit]').click()
-        cy.get('[name=Arabic_Numerals]').contains('2021')
+    cy.get("[name=Roman_Numerals]").type(`${newItem}`)
+    cy.get("[data-test=number-submit]").click()
+    cy.get("[data-test=number-output]").contains("2021")
 
-        const newItem2 = 'MMMDCCCLXXXVIII'
+    const newItem2 = "MMMDCCCLXXXVIII"
 
-        cy.get('[name=Roman_Numerals]').clear()
-        cy.get('[name=Roman_Numerals]').type(`${newItem2}`)
-        cy.get('[data-test=number-submit]').click()
-        cy.get('[name=Araabic_Numerals]').contains('3888')
-    })
+    cy.get("[name=Roman_Numerals]").clear()
+    cy.get("[name=Roman_Numerals]").type(`${newItem2}`)
+    cy.get("[data-test=number-submit]").click()
+    cy.get("[data-test=number-output]").contains("3888")
+  })
 })

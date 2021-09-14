@@ -13,21 +13,21 @@
         @Html.EditorFor(model => model.Roman_Numerals)
     </div>
     <button data-test="number-submit" id="number-submit">Submit</button>
-    <div data-test="number-output">
-        @Html.DisplayFor(model => model.Arabic_Numerals)
-    </div>
+    <div data-test="number-output" id="convert-result" />
 </div>
 
 @section Scripts{
     <script>
     $(document).ready(function () {
+        $("#number-submit").click(function () {
+            var request = {
+                    Roman_Numerals: $("input[name='Roman_Numerals']").val()
+                };
 
-        $("number-submit").click(function () {
-            $.getJSON('@Url.Action("convert")', function (data) {
-                $("#mytext").val(data);
+            $.post('@Url.Action("convert", "Numeral")', request, function(data) {
+                $("#convert-result").text(data.arabic_Numerals);
             });
         });
-
     });
     </script>
 }
